@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
+import { randomUUID } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const scriptRoot = dirname(fileURLToPath(import.meta.url));
@@ -181,6 +182,47 @@ async function assertHeadProbe(mcpUrl) {
   parseAuthenticateHeader(response.headers.get('www-authenticate'));
 }
 
+async function assertDuplicateResourceAuthorize(mcpUrl) {
+  const redirectUri = `http://127.0.0.1:63988/callback/${randomUUID()}`;
+  const registration = await fetch('https://leadtime.app/api/oauth/register', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      redirect_uris: [redirectUri],
+      client_name: 'Leadtime Codex compatibility probe',
+      grant_types: ['authorization_code', 'refresh_token'],
+      response_types: ['code'],
+      token_endpoint_auth_method: 'none',
+      scope: 'api:read api:write',
+    }),
+  });
+
+  const registrationBody = await registration.json().catch(() => undefined);
+  if (!registration.ok || !registrationBody?.client_id) {
+    fail(`Dynamic client registration failed with ${registration.status}`);
+  }
+
+  const authorizeUrl = new URL('https://leadtime.app/api/oauth/authorize');
+  authorizeUrl.searchParams.set('response_type', 'code');
+  authorizeUrl.searchParams.set('client_id', registrationBody.client_id);
+  authorizeUrl.searchParams.set('redirect_uri', redirectUri);
+  authorizeUrl.searchParams.set('state', randomUUID());
+  authorizeUrl.searchParams.set('code_challenge', 'codex-compat-probe');
+  authorizeUrl.searchParams.set('code_challenge_method', 'plain');
+  authorizeUrl.searchParams.set('scope', 'api:read api:write');
+  authorizeUrl.searchParams.append('resource', mcpUrl);
+  authorizeUrl.searchParams.append('resource', mcpUrl);
+
+  const response = await fetch(authorizeUrl, { redirect: 'manual' });
+  const text = await response.text();
+  if (response.status === 400 && text.includes('Invalid resource parameter')) {
+    fail('OAuth authorize rejected duplicate identical resource parameters from Codex');
+  }
+  if (![302, 303, 307, 308].includes(response.status)) {
+    fail(`OAuth authorize should redirect to consent, got ${response.status}: ${text.slice(0, 300)}`);
+  }
+}
+
 async function main() {
   const manifest = await readJson(manifestPath);
   if (manifest.mcpServers !== './.mcp.json') {
@@ -200,6 +242,7 @@ async function main() {
   const resourceUrl = await assertProtectedResourceMetadata(server.url);
   await assertCodexUnauthenticatedStartup(server.url);
   await assertHeadProbe(server.url);
+  await assertDuplicateResourceAuthorize(server.url);
 
   log('Leadtime MCP Codex compatibility probe passed.');
   log(`Codex OAuth discovery matched: ${discoveryUrl}`);
