@@ -2,7 +2,6 @@
   "mcpServers": {
     "leadtime": {
       "url": "https://leadtime.app/api/mcp",
-      "bearer_token_env_var": "LEADTIME_MCP_TOKEN",
       "startup_timeout_sec": 20,
       "tool_timeout_sec": 60,
       "default_tools_approval_mode": "prompt"

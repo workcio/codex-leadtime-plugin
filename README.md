@@ -4,17 +4,13 @@ This folder is the source of truth for the public Leadtime Codex plugin marketpl
 
 The public repository is generated from this project and should not be edited directly.
 
-The bundled MCP server uses the production Leadtime MCP endpoint:
+The bundled MCP server uses the production Leadtime MCP endpoint with OAuth:
 
 ```text
 https://leadtime.app/api/mcp
 ```
 
-Users must expose a Leadtime MCP-capable token to Codex as:
-
-```bash
-export LEADTIME_MCP_TOKEN=lt_...
-```
+Codex should prompt users to sign in through the MCP OAuth flow. Personal access tokens are only for users building scripts, automations, or external integrations against the Public API.
 
 ## Local validation
 

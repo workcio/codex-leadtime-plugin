@@ -1,12 +1,14 @@
 ---
 name: leadtime-tasks
-description: Use when planning, splitting, updating, or explaining Leadtime task and project workflows.
+description: Use when the user asks to work with Leadtime, inspect/update Leadtime data, plan tasks, or sends a Leadtime link.
 ---
 
-# Leadtime Tasks
+# Leadtime
 
-Use this skill when the user asks Codex to plan work for Leadtime, split tasks, draft task comments, define project follow-ups, or explain how task-oriented Leadtime workflows should be represented.
+Use this skill when the user asks Codex to work with Leadtime, inspect or update tasks/projects/workspace data, plan task work, draft task comments, or sends a Leadtime link.
 
-Prefer concrete task titles, acceptance criteria, owner assumptions, and dependencies over broad prose. When the user is working against a real Leadtime workspace, use available Leadtime tools or API access before guessing current task state.
+Prefer the bundled Leadtime MCP server for real workspace data. Do not tell the user to create a personal access token for normal in-product work if MCP is available; use OAuth/MCP login instead. Ask for an API key only when the user wants to build scripts, automations, or third-party integrations outside Codex.
+
+When planning work, prefer concrete task titles, acceptance criteria, owner assumptions, and dependencies over broad prose. When the user references existing Leadtime data, use MCP before guessing current state.
 
 For implementation work in a Leadtime repository, follow that repository's local instructions and domain docs first.

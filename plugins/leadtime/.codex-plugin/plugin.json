@@ -1,7 +1,7 @@
 {
   "name": "leadtime",
-  "version": "0.1.1",
-  "description": "Leadtime workflows and public API guidance for Codex.",
+  "version": "0.1.2",
+  "description": "Work with Leadtime data and workflows from Codex.",
   "author": {
     "name": "Leadtime Labs GmbH",
     "email": "support@leadtime.app",
@@ -15,8 +15,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Leadtime",
-    "shortDescription": "Work with Leadtime tasks, projects, and public API flows.",
-    "longDescription": "Use Leadtime product guidance, public API workflows, and the Leadtime MCP server from Codex when planning task work, automation setup, API usage, and customer workflows.",
+    "shortDescription": "Work with Leadtime tasks, projects, and workspace data.",
+    "longDescription": "Use the Leadtime MCP server from Codex when the user asks to inspect or update Leadtime tasks, projects, workspace data, or sends a Leadtime link. Use Public API guidance only when the user is building scripts or external integrations.",
     "developerName": "Leadtime Labs GmbH",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
@@ -24,8 +24,9 @@
     "privacyPolicyURL": "https://leadtime.app/privacy",
     "termsOfServiceURL": "https://leadtime.app/terms",
     "defaultPrompt": [
-      "Use Leadtime to plan the tasks for this project.",
-      "Help me create a Leadtime Public API integration for this workflow."
+      "Show my open Leadtime tasks.",
+      "Help me update this Leadtime task.",
+      "Build a Leadtime Public API integration."
     ],
     "brandColor": "#0F766E"
   }
