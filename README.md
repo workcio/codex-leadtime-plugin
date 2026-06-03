@@ -16,10 +16,18 @@ Personal access tokens are only for users building scripts, automations, or exte
 
 ## Local validation
 
+From the Leadtime monorepo root:
+
 ```bash
 npx nx lint codex-leadtime-plugin
 npx nx build codex-leadtime-plugin
 node libs/integrations/codex-leadtime-plugin/scripts/codex-mcp-compat-probe.mjs
+```
+
+From the generated public repository root:
+
+```bash
+node scripts/codex-mcp-compat-probe.mjs
 ```
 
 ## Public sync
