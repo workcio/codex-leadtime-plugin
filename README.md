@@ -44,4 +44,9 @@ The sync script publishes the generated artifact to:
 https://github.com/workcio/codex-leadtime-plugin
 ```
 
-Set `CODEX_PLUGIN_SYNC_TOKEN` in CI to a token that can write to that public repository.
+Set `AGENT_PLUGIN_SYNC_TOKEN` in CI to a token that can write to both public plugin repositories:
+
+- `workcio/codex-leadtime-plugin`
+- `workcio/claude-leadtime-plugin`
+
+For backward compatibility, the sync scripts also accept `CODEX_PLUGIN_SYNC_TOKEN`.
