@@ -2,6 +2,8 @@
   "mcpServers": {
     "leadtime": {
       "url": "https://leadtime.app/api/mcp",
+      "oauth_resource": "https://leadtime.app/api/mcp",
+      "scopes": ["api:read", "api:write"],
       "startup_timeout_sec": 20,
       "tool_timeout_sec": 60,
       "default_tools_approval_mode": "auto"

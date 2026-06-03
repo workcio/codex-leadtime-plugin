@@ -1,6 +1,6 @@
 {
   "name": "leadtime",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Work with Leadtime data and workflows from Codex.",
   "author": {
     "name": "Leadtime Labs GmbH",
