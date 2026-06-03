@@ -1,0 +1,31 @@
+{
+  "name": "leadtime",
+  "version": "0.1.0",
+  "description": "Leadtime workflows and public API guidance for Codex.",
+  "author": {
+    "name": "Leadtime Labs GmbH",
+    "email": "support@leadtime.app",
+    "url": "https://leadtime.app"
+  },
+  "homepage": "https://leadtime.app",
+  "repository": "https://github.com/workcio/codex-leadtime-plugin",
+  "license": "MIT",
+  "keywords": ["leadtime", "tasks", "projects", "erp", "public-api"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Leadtime",
+    "shortDescription": "Work with Leadtime tasks, projects, and public API flows.",
+    "longDescription": "Use Leadtime product and API guidance from Codex when planning task work, automation setup, public API usage, and customer workflows.",
+    "developerName": "Leadtime Labs GmbH",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://leadtime.app",
+    "privacyPolicyURL": "https://leadtime.app/privacy",
+    "termsOfServiceURL": "https://leadtime.app/terms",
+    "defaultPrompt": [
+      "Use Leadtime to plan the tasks for this project.",
+      "Help me create a Leadtime Public API integration for this workflow."
+    ],
+    "brandColor": "#0F766E"
+  }
+}
