@@ -19,6 +19,7 @@ Personal access tokens are only for users building scripts, automations, or exte
 ```bash
 npx nx lint codex-leadtime-plugin
 npx nx build codex-leadtime-plugin
+node libs/integrations/codex-leadtime-plugin/scripts/codex-mcp-compat-probe.mjs
 ```
 
 ## Public sync
