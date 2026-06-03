@@ -1,6 +1,6 @@
 {
   "name": "leadtime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Leadtime workflows and public API guidance for Codex.",
   "author": {
     "name": "Leadtime Labs GmbH",
@@ -12,10 +12,11 @@
   "license": "MIT",
   "keywords": ["leadtime", "tasks", "projects", "erp", "public-api"],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Leadtime",
     "shortDescription": "Work with Leadtime tasks, projects, and public API flows.",
-    "longDescription": "Use Leadtime product and API guidance from Codex when planning task work, automation setup, public API usage, and customer workflows.",
+    "longDescription": "Use Leadtime product guidance, public API workflows, and the Leadtime MCP server from Codex when planning task work, automation setup, API usage, and customer workflows.",
     "developerName": "Leadtime Labs GmbH",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
