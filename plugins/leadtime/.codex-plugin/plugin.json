@@ -1,6 +1,6 @@
 {
   "name": "leadtime",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Work with Leadtime data and workflows from Codex.",
   "author": {
     "name": "Leadtime Labs GmbH",
@@ -16,7 +16,7 @@
   "interface": {
     "displayName": "Leadtime",
     "shortDescription": "Work with Leadtime tasks, projects, and workspace data.",
-    "longDescription": "Use the Leadtime MCP server from Codex when the user asks to inspect or update Leadtime tasks, projects, workspace data, or sends a Leadtime link. Follow Leadtime's internal agent conventions for task workflow, rich-text HTML fields, entity links, and reports. Use Public API guidance only when the user is building scripts or external integrations.",
+    "longDescription": "Use the bundled Leadtime MCP server from Codex when the user asks to inspect or update Leadtime tasks, projects, workspace data, or sends a Leadtime link. Follow Leadtime's internal agent conventions for task workflow, rich-text HTML fields, entity links, and reports. Use Public API guidance only when the user is building scripts or external integrations.",
     "developerName": "Leadtime Labs GmbH",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],

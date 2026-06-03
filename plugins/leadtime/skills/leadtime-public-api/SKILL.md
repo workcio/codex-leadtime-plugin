@@ -7,7 +7,7 @@ description: Use only when the user wants to build scripts, automations, or exte
 
 Use this skill only when the user asks Codex to build, debug, or plan scripts, automations, Zapier/n8n-style connectors, or other external integrations with the Leadtime Public API.
 
-For normal Leadtime workspace operations inside Codex, prefer the bundled MCP server instead of telling the user to create a personal access token.
+For normal Leadtime workspace operations inside Codex, prefer the bundled Leadtime MCP server instead of telling the user to create a personal access token.
 
 For integration work, check the user's available API docs, workspace-specific credentials, and integration requirements before proposing endpoints. Keep credentials out of prompts, source files, logs, and generated examples. Use bearer-token examples with placeholders unless the user has explicitly provided a safe local test token.
 
