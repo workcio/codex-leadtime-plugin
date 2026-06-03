@@ -11,4 +11,6 @@ For normal Leadtime workspace operations inside Codex, prefer the bundled MCP se
 
 For integration work, check the user's available API docs, workspace-specific credentials, and integration requirements before proposing endpoints. Keep credentials out of prompts, source files, logs, and generated examples. Use bearer-token examples with placeholders unless the user has explicitly provided a safe local test token.
 
+When writing rich content through the Public API, use HTML for Leadtime editor fields unless the endpoint schema says otherwise. Read action details for the endpoint and follow the field's supported nodes and marks.
+
 When updating official Leadtime integrations, keep Zapier, n8n, public API DTOs/controllers, and integration docs aligned with the changed API surface.
