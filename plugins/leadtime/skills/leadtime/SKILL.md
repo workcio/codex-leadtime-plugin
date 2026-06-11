@@ -72,6 +72,8 @@ For "my tasks" summaries, resolve the current user, default to open assigned tas
 
 ## Links And Output
 
+When using Leadtime MCP tools, call `leadtime-get-urls` in the same turn before returning any Leadtime entity or navigation links. Do not hand-compose app URLs from memory.
+
 Use full Leadtime URLs when you know the workspace URL. Entity links:
 
 - Task: `/task/[taskNumber]` using singular `task`; never `/tasks/` for a single task.
