@@ -1,11 +1,27 @@
 ---
 name: leadtime
-description: Use when the user asks to work with Leadtime, inspect/update Leadtime data, manage tasks, summarize work, or sends a Leadtime link.
+description: Use when the user asks to work with Leadtime, inspect/update Leadtime data, manage tasks, summarize work, or sends a Leadtime link. Explains what Leadtime is and how its building blocks fit together.
 ---
 
 # Leadtime
 
 Use this skill when the user asks Codex to work with Leadtime, inspect or update tasks/projects/workspace data, plan task work, draft comments, create tasks, summarize reports, or sends a Leadtime link.
+
+## What Leadtime is
+
+Leadtime is a B2B work-management platform (lightweight ERP) for service companies. Each tenant is a **workspace**. Core building blocks:
+
+- **Organizations** — clients, prospects, suppliers (CRM "companies" mean organizations, not objects).
+- **Projects** — all work lives here; external vs internal; single (fixed scope) vs ongoing (support).
+- **Sales opportunities** — external projects in a sales-stage status, not a separate CRM entity.
+- **Components & products** — reusable project templates and catalog items for scoping, quotes, and tickets.
+- **Tasks (tickets)** — every task belongs to a project; only status type `Closed` means closed.
+- **Planning** — Big Picture → Pool → Pipeline → Stack.
+- **Time & billing** — attendance vs booked time; customer time feeds invoices.
+
+Typical flow: organization → opportunity → offer → delivery project → time/tasks → invoice → ongoing support project.
+
+Permissions are per user/role — never assume admin access.
 
 ## Default Tool Path
 
