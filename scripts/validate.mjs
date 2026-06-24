@@ -3,7 +3,10 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url));
-const projectRoot = join(repoRoot, 'libs/integrations/codex-leadtime-plugin');
+const projectRoot = join(
+  repoRoot,
+  'dist/libs/integrations/codex-leadtime-plugin',
+);
 const pluginRoot = join(projectRoot, 'plugins/leadtime');
 const errors = [];
 
@@ -28,23 +31,35 @@ function isHttpsUrl(value) {
   return typeof value === 'string' && value.startsWith('https://');
 }
 
-const marketplace = await readJson(join(projectRoot, '.agents/plugins/marketplace.json'));
+const marketplace = await readJson(
+  join(projectRoot, '.agents/plugins/marketplace.json'),
+);
 const manifest = await readJson(join(pluginRoot, '.codex-plugin/plugin.json'));
 
 if (marketplace) {
-  if (marketplace.name !== 'leadtime') fail('Marketplace name must be "leadtime".');
-  if (!marketplace.interface?.displayName) fail('Marketplace interface.displayName is required.');
-  const entry = marketplace.plugins?.find((plugin) => plugin.name === 'leadtime');
+  if (marketplace.name !== 'leadtime')
+    fail('Marketplace name must be "leadtime".');
+  if (!marketplace.interface?.displayName)
+    fail('Marketplace interface.displayName is required.');
+  const entry = marketplace.plugins?.find(
+    (plugin) => plugin.name === 'leadtime',
+  );
   if (!entry) fail('Marketplace must include the leadtime plugin entry.');
-  if (entry?.source?.path !== './plugins/leadtime') fail('Marketplace source.path must be ./plugins/leadtime.');
-  if (entry?.policy?.installation !== 'AVAILABLE') fail('Marketplace policy.installation must be AVAILABLE.');
-  if (entry?.policy?.authentication !== 'ON_INSTALL') fail('Marketplace policy.authentication must be ON_INSTALL.');
+  if (entry?.source?.path !== './plugins/leadtime')
+    fail('Marketplace source.path must be ./plugins/leadtime.');
+  if (entry?.policy?.installation !== 'AVAILABLE')
+    fail('Marketplace policy.installation must be AVAILABLE.');
+  if (entry?.policy?.authentication !== 'ON_INSTALL')
+    fail('Marketplace policy.authentication must be ON_INSTALL.');
 }
 
 if (manifest) {
-  if (manifest.name !== 'leadtime') fail('Plugin manifest name must be "leadtime".');
-  if (!isStrictSemver(manifest.version)) fail('Plugin manifest version must be strict semver, e.g. 0.1.0.');
-  if (manifest.skills !== './skills/') fail('Plugin manifest skills path must be ./skills/.');
+  if (manifest.name !== 'leadtime')
+    fail('Plugin manifest name must be "leadtime".');
+  if (!isStrictSemver(manifest.version))
+    fail('Plugin manifest version must be strict semver, e.g. 0.1.0.');
+  if (manifest.skills !== './skills/')
+    fail('Plugin manifest skills path must be ./skills/.');
   for (const field of ['websiteURL', 'privacyPolicyURL', 'termsOfServiceURL']) {
     if (manifest.interface?.[field] && !isHttpsUrl(manifest.interface[field])) {
       fail(`Plugin interface.${field} must be an https URL.`);
@@ -71,11 +86,14 @@ if (!manifest?.mcpServers) {
     fail('Bundled Leadtime MCP url must be https://leadtime.app/api/mcp.');
   }
   if (leadtimeMcp?.oauth_resource !== 'https://leadtime.app/api/mcp') {
-    fail('Bundled Leadtime MCP must set oauth_resource to https://leadtime.app/api/mcp.');
+    fail(
+      'Bundled Leadtime MCP must set oauth_resource to https://leadtime.app/api/mcp.',
+    );
   }
   const scopes = leadtimeMcp?.scopes ?? [];
   for (const scope of ['api:read', 'api:write']) {
-    if (!scopes.includes(scope)) fail(`Bundled Leadtime MCP must request ${scope}.`);
+    if (!scopes.includes(scope))
+      fail(`Bundled Leadtime MCP must request ${scope}.`);
   }
 }
 
@@ -107,10 +125,14 @@ for (const dir of skillDirs) {
   }
 
   const name = frontmatter[1].match(/^name:\s*(.+)$/m)?.[1]?.trim();
-  const description = frontmatter[1].match(/^description:\s*(.+)$/m)?.[1]?.trim();
-  if (name !== dir) fail(`Skill ${dir} frontmatter name must match folder name.`);
+  const description = frontmatter[1]
+    .match(/^description:\s*(.+)$/m)?.[1]
+    ?.trim();
+  if (name !== dir)
+    fail(`Skill ${dir} frontmatter name must match folder name.`);
   if (!description) fail(`Skill ${dir} must include a description.`);
-  if (content.includes('[TODO')) fail(`Skill ${dir} contains a TODO placeholder.`);
+  if (content.includes('[TODO'))
+    fail(`Skill ${dir} contains a TODO placeholder.`);
 }
 
 if (errors.length) {

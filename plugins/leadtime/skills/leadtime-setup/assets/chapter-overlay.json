@@ -1,0 +1,217 @@
+{
+  "_comment": "Only manually maintained mapping: docId -> chapter + step type. Order, titles, and videos are generated from Gleap by scripts/sync-onboarding-steps.sh. chapter = A..M grouping. type: 'config' = agent configures through MCP with confirmation; 'learn' = agent explains and links video, optionally creates a demo. core = true means part of v1 setup (Phase 0-1 + chapters A-D + imports); false means module-dependent and selected during the interview.",
+  "169": { "chapter": "A", "type": "learn", "core": true, "title": "Welcome" },
+  "170": {
+    "chapter": "B",
+    "type": "config",
+    "core": true,
+    "title": "Set up workspace"
+  },
+  "171": {
+    "chapter": "C",
+    "type": "config",
+    "core": true,
+    "title": "Create employees"
+  },
+  "172": {
+    "chapter": "C",
+    "type": "config",
+    "core": true,
+    "import": true,
+    "title": "Create organizations"
+  },
+  "173": {
+    "chapter": "D",
+    "type": "config",
+    "core": true,
+    "title": "Project structure"
+  },
+  "174": {
+    "chapter": "D",
+    "type": "config",
+    "core": true,
+    "title": "External ongoing projects"
+  },
+  "175": {
+    "chapter": "E",
+    "type": "learn",
+    "core": false,
+    "title": "Ticketing basics"
+  },
+  "176": {
+    "chapter": "E",
+    "type": "learn",
+    "core": false,
+    "title": "The complete ticket workflow"
+  },
+  "177": {
+    "chapter": "E",
+    "type": "config",
+    "core": false,
+    "title": "Customize the ticket system"
+  },
+  "178": {
+    "chapter": "E",
+    "type": "config",
+    "core": false,
+    "title": "External users in ticketing"
+  },
+  "179": {
+    "chapter": "E",
+    "type": "config",
+    "core": false,
+    "title": "Set up helpdesk"
+  },
+  "196": {
+    "chapter": "E",
+    "type": "learn",
+    "core": false,
+    "title": "Professionalize ticket management"
+  },
+  "180": {
+    "chapter": "F",
+    "type": "learn",
+    "core": false,
+    "title": "Time tracking"
+  },
+  "181": {
+    "chapter": "F",
+    "type": "config",
+    "core": false,
+    "title": "Manage absences"
+  },
+  "193": {
+    "chapter": "F",
+    "type": "config",
+    "core": false,
+    "title": "Manage overtime"
+  },
+  "194": {
+    "chapter": "F",
+    "type": "learn",
+    "core": false,
+    "title": "For employees"
+  },
+  "195": {
+    "chapter": "F",
+    "type": "config",
+    "core": false,
+    "title": "Enforce time tracking"
+  },
+  "197": {
+    "chapter": "G",
+    "type": "config",
+    "core": false,
+    "title": "Customers as guest users"
+  },
+  "198": {
+    "chapter": "H",
+    "type": "learn",
+    "core": false,
+    "title": "Overview with Big Picture and Pools"
+  },
+  "199": {
+    "chapter": "H",
+    "type": "learn",
+    "core": false,
+    "title": "Throughput with Pipeline and Stacks"
+  },
+  "200": {
+    "chapter": "I",
+    "type": "config",
+    "core": false,
+    "title": "Billing system"
+  },
+  "201": {
+    "chapter": "I",
+    "type": "config",
+    "core": false,
+    "title": "Invoice sending and receivables"
+  },
+  "202": {
+    "chapter": "J",
+    "type": "learn",
+    "core": false,
+    "title": "Insights"
+  },
+  "203": {
+    "chapter": "J",
+    "type": "learn",
+    "core": false,
+    "title": "Dashboards"
+  },
+  "204": {
+    "chapter": "K",
+    "type": "config",
+    "core": false,
+    "import": true,
+    "title": "Product catalog"
+  },
+  "205": {
+    "chapter": "K",
+    "type": "learn",
+    "core": false,
+    "title": "Express offers"
+  },
+  "206": { "chapter": "K", "type": "config", "core": false, "title": "Sales" },
+  "207": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Individual projects introduction"
+  },
+  "208": {
+    "chapter": "L",
+    "type": "config",
+    "core": false,
+    "title": "Design project template"
+  },
+  "209": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Use project template"
+  },
+  "210": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Create project offer"
+  },
+  "211": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Create specification document"
+  },
+  "212": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Project contract"
+  },
+  "213": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Project execution"
+  },
+  "214": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Project acceptance"
+  },
+  "215": {
+    "chapter": "L",
+    "type": "learn",
+    "core": false,
+    "title": "Project billing"
+  },
+  "216": {
+    "chapter": "M",
+    "type": "learn",
+    "core": false,
+    "title": "Project to support"
+  }
+}

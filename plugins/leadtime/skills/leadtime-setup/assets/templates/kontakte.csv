@@ -1,0 +1,2 @@
+Organization;Organization type;Salutation;First name;Last name;Email;Position;Phone;Street;House number;Postal code;City;Country;Login;Role
+Example GmbH (delete this example row before import);Customer;Mr;Max;Example;max@example.com;Managing director;+49 30 1234567;Example Street;1;10115;Berlin;DE;yes;Guest

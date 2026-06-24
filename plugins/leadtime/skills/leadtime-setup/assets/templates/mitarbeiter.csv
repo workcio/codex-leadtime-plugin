@@ -1,0 +1,2 @@
+First name;Last name;Email;Role;Position;Salutation;Title;Phone;Street;House number;Postal code;City;Country;Birth date;Employment type;Start date;Tax class;Login;Teams;Weekly hours;Work days;Monthly gross salary;Salary valid from;Annual vacation days;Current remaining vacation;Carryover from previous year
+Max (delete this example row before import);Example;max@your-company.com;Employee;Project lead;Mr;;+49 170 1234567;Example Street;12;10115;Berlin;DE;1990-05-01;FullTime;2024-01-15;1;yes;Project Team;40;Mon-Fri;4500;2024-01-15;30;18;0

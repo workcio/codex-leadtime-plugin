@@ -4,6 +4,8 @@ This folder is the source of truth for the public Leadtime Codex plugin marketpl
 
 The public repository is generated from this project and should not be edited directly.
 
+Common Leadtime skills are generated from `libs/integrations/agent-plugin-core` during build. Keep shared behavior there, and put Codex-only packaging or MCP behavior in this package.
+
 The plugin bundles the production Leadtime MCP endpoint:
 
 ```text
