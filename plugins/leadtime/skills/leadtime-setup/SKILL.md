@@ -19,7 +19,7 @@ The onboarding order, titles, video links, and article links are stored in:
 
 `assets/onboarding-steps.json`
 
-Always read that file first. Each entry has `order`, `chapter`, `type` (`config` or `learn`), `core`, `import`, `docId`, `title`, `videoUrl`, `videoStart`, and `articleUrl`.
+Always read that file first. Each entry has `order`, `chapter`, `type` (`config` or `learn`), `core`, `import`, `title`, `videoUrl`, `videoStart`, and the repository-backed documentation `slug`.
 
 ## Flow
 
@@ -39,7 +39,7 @@ Every onboarding step has a `type`:
 Close every step with a learning block using values from `onboarding-steps.json`. Use a short `youtu.be/<id>` link and append `?t=<seconds>` when `videoStart > 0`:
 
 > **Video:** {title} -> https://youtu.be/{videoId}
-> **Read more:** {articleUrl}
+> **Read more:** https://docs.leadtime.app/{slug}
 
 Then ask whether the step is clear and complete before moving on.
 
@@ -72,4 +72,4 @@ Onboarding often spans multiple sessions. At the beginning, create an **Onboardi
 
 ## Maintenance
 
-When help-center videos or onboarding order change, refresh `assets/onboarding-steps.json` with the sync script. `assets/chapter-overlay.json` is the manually maintained chapter/type overlay.
+Update `assets/onboarding-steps.json` in the repository when onboarding videos, order, or documentation routes change. The documentation slug is the only help-center identifier.

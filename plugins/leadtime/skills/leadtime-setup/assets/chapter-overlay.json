@@ -1,6 +1,10 @@
 {
-  "_comment": "Only manually maintained mapping: docId -> chapter + step type. Order, titles, and videos are generated from Gleap by scripts/sync-onboarding-steps.sh. chapter = A..M grouping. type: 'config' = agent configures through MCP with confirmation; 'learn' = agent explains and links video, optionally creates a demo. core = true means part of v1 setup (Phase 0-1 + chapters A-D + imports); false means module-dependent and selected during the interview.",
-  "169": { "chapter": "A", "type": "learn", "core": true, "title": "Welcome" },
+  "169": {
+    "chapter": "A",
+    "type": "learn",
+    "core": true,
+    "title": "Welcome"
+  },
   "170": {
     "chapter": "B",
     "type": "config",
@@ -62,12 +66,6 @@
     "core": false,
     "title": "Set up helpdesk"
   },
-  "196": {
-    "chapter": "E",
-    "type": "learn",
-    "core": false,
-    "title": "Professionalize ticket management"
-  },
   "180": {
     "chapter": "F",
     "type": "learn",
@@ -97,6 +95,12 @@
     "type": "config",
     "core": false,
     "title": "Enforce time tracking"
+  },
+  "196": {
+    "chapter": "E",
+    "type": "learn",
+    "core": false,
+    "title": "Professionalize ticket management"
   },
   "197": {
     "chapter": "G",
@@ -153,7 +157,12 @@
     "core": false,
     "title": "Express offers"
   },
-  "206": { "chapter": "K", "type": "config", "core": false, "title": "Sales" },
+  "206": {
+    "chapter": "K",
+    "type": "config",
+    "core": false,
+    "title": "Sales"
+  },
   "207": {
     "chapter": "L",
     "type": "learn",
@@ -213,5 +222,6 @@
     "type": "learn",
     "core": false,
     "title": "Project to support"
-  }
+  },
+  "_comment": "Manually maintained chapter and step-type metadata for the repository-backed onboarding catalog. chapter = A..M grouping. type: config means the agent configures through MCP with confirmation; learn means the agent explains and links the video. core marks the default setup path."
 }
