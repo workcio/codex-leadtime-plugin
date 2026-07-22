@@ -24,7 +24,7 @@ Work through the **Leadtime MCP connector** from the Leadtime plugin with OAuth.
 
 ## Hard Rules
 
-- For knowledge questions, use `leadtime-help-center-search` or `leadtime-help-center-article` before answering.
+- For knowledge questions, use `leadtime-help-center` with `action: "search"`, then `action: "read"`; use `action: "toc"` to orient over a whole area.
 - For writes, follow the MCP workflow strictly: `list-actions`, then `action-details`, then `execute-action`.
 - Confirm before every write and bundle related questions.
 - After data changes, provide a review checkpoint with an in-app deeplink from `leadtime-get-urls`, ask the user to inspect the result, and actively offer to repair issues.
