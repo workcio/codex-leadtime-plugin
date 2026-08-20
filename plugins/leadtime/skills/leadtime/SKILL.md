@@ -45,6 +45,9 @@ For vague action requests like "create a task" without details, ask a short clar
 
 Many Leadtime fields store ProseMirror editor content. When creating or updating descriptions, comments, journals, product descriptions, document content, or similar rich-text fields:
 
+For project knowledge pages, load `project-documentation`. It owns compact
+discovery, bounded reads, focused edits, safe retries, and durable maintenance.
+
 - Use HTML unless the tool schema explicitly asks for another format.
 - Read the action/tool schema first and use only supported nodes/marks for that field.
 - Do not assume all editor fields support the same HTML.

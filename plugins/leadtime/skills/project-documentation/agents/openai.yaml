@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Project Documentation'
+  short_description: 'Maintain durable Leadtime project knowledge'
+  default_prompt: 'Use $project-documentation to find and update durable project knowledge safely.'
