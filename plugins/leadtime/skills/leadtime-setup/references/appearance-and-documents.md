@@ -8,7 +8,7 @@ Workspace appearance controls the app UI. Read current values first, then patch 
 
 Typical settings:
 
-- `mainWorkspaceColor`: accent color for navigation, buttons, and active states. Leadtime may use a fixed set such as `DEFAULT`, `BLACK`, `RED`, `ROSE`, `MAGENTA`, `GREEN`, `BLUE`, `YELLOW`, `VIOLET`. If the company website was inspected, infer the closest available brand color and ask for confirmation.
+- `mainWorkspaceColor`: accent color for navigation, buttons, and active states. Leadtime may use a fixed set such as `DEFAULT`, `BLACK`, `RED`, `ROSE`, `MAGENTA`, `GREEN`, `BLUE`, `SKY`, `YELLOW`, `VIOLET`. If the company website was inspected, infer the closest available brand color and ask for confirmation.
 - Logo for normal mode.
 - Logo for dark mode.
 - Optional document font/layout settings.
